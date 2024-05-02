@@ -6,14 +6,200 @@ body {
     width: 100vw;
     overflow: hidden;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 0;
 
     background-color: hsl(235, 18%, 26%);
 }
 
-@media screen {
+@media screen and (max-width: 900px) {
+    body {
+        background-color: white
+    }
+
+    #card {
+        width: 100%;
+        height: 100%;
+
+        background-color: white;
+
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    #form {
+        grid-row: 2;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 55px;
+        color: hsl(235, 18%, 26%);
+
+        width: 90%;
+
+        margin: 0;
+
+        font-family: Roboto-Bold, "system-ui";
+    }
+
+    p, li {
+        font-size: 20px;
+        color: hsl(235, 18%, 26%);
+        width: 100%;
+
+        font-family: Roboto-Regular, "system-ui";
+    }
+
+    li {
+        height: 20px;
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 40px;
+
+        list-style-type: none;
+        text-wrap: wrap;
+    }
+
+    .ico {
+        height: 30px;
+        width: 30px;
+
+        margin-right: 7px;
+
+        background-image: url(assets/images/icon-list.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    form {width: 100%;}
+
+    input {
+        width: calc(100% - 10px);
+        height: 60px;
+
+        font-size: 20px;
+        color: hsl(235, 18%, 26%);
+
+        padding-left: 10px;
+        padding-right: 0;
+
+        border: 1px solid hsl(0, 0%, 59%);
+        border-radius: 10px;
+
+        margin-bottom: 15px;
+
+        transition: all 500ms;
+    }
+    input::placeholder {
+        font-size: 20px;
+    }
+    input:focus {
+        border: 1px solid hsl(235, 18%, 26%);
+
+        transition: all 500ms;
+    }
+
+    button, a {
+        width: 100%;
+        height: 60px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0;
+
+        background-color: hsl(235, 18%, 26%);
+        color: white;
+
+        border: 1px rgb(1, 1, 1, 0);
+        border-radius: 10px;
+
+        font-size: 20px;
+        font-weight: 400;
+        font-family: Roboto-Bold, "system-ui";
+
+        transition: all 500ms;
+    }
+    button:hover, a:hover {
+        cursor: pointer;
+        background: #dd3f4c;
+        
+        transition: all 500ms;
+    }
+
+    #img {
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-size: cover;
+        border-bottom-left-radius: 21.6px;
+        border-bottom-right-radius: 21.6px;
+    }
+    
+    #thanks {
+        width: 90%;
+        height: 90%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 20px;
+
+        background-color: white;
+        border-radius: 24px;
+
+        transition: all 500ms;
+    }
+
+    #icon-success {
+        height: 100px;
+        width: 100px;
+        background-image: url(assets/images/icon-success.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 50px;
+        color: hsl(235, 18%, 26%);
+
+        width: 90%;
+
+        margin: 0;
+        margin-bottom: 10px;
+
+        font-family: Robto-Bold, "system-ui";
+    }
+
+    #email_string {
+        font-weight: bold;
+    }
+
+    a {
+        width: 90%;
+        margin-top: 20px;
+        align-self: center;
+        text-decoration: none;
+    }
+    
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     #card {
         width: 800px;
         height: 550px;
@@ -71,16 +257,14 @@ body {
 
     ul {
         width: 100%;
-        padding-right: 0;
     }
 
     li {
-        height: 16px;
+        height: 30px;
         display: flex;
         align-items: center;
 
-        margin-bottom: 10px;
-        padding-left: 20px;
+        margin-bottom: 25px;
 
         list-style-type: none;
     }
